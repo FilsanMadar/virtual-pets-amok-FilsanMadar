@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.util.Collection;
 
-import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
@@ -47,7 +46,6 @@ public class VirtualPetShelterTest {
 	public void shouldAdoptVirtualPets() {
 		VirtualPet pet = new VirtualPet("Hina", DESCRIPTION);
 		underTest.adopt(pet.getName());
-
 		assertThat(underTest.doesPetRemain(pet.getName()), is(false));
 	}
 
@@ -82,7 +80,7 @@ public class VirtualPetShelterTest {
 	public void shouldShelterPlayWithHold() {
 		VirtualPet pet = new VirtualPet("Bulma", DESCRIPTION);
 		underTest.intake(pet);
-		underTest.play("Hold");
+		underTest.play("Bulma");
 		assertEquals(50, underTest.findPet("Bulma").getBoredom());
 	}
 
@@ -95,9 +93,9 @@ public class VirtualPetShelterTest {
 		underTest.oilAll();
 		VirtualPet testPet = (VirtualPet) underTest.findPet("Jasper2");
 		int oil = testPet.getOil();
-		assertEquals("Jasper2", testPet.getName()); // looks for specific pet
-		assertEquals(20, oil); // This one will find the Hold2
-		assertEquals(35, ((VirtualPet) underTest.findPet("Jasper3")).getOil()); // This one will find the Hold 3
+		assertEquals("Jasper2", testPet.getName());
+		assertEquals(20, oil);
+		assertEquals(35, ((VirtualPet) underTest.findPet("Jasper3")).getOil());
 	}
 
 	@Test

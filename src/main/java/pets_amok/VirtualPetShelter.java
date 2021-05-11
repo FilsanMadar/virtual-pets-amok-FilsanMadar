@@ -54,7 +54,7 @@ public class VirtualPetShelter {
 		return shelterPets.get(petName);
 	}
 
-	// Return specific Virtual Pet given its name
+
 	public void intake(VirtualPet virtualPet) {
 		String newName = virtualPet.getName();
 		shelterPets.put(newName, virtualPet);

@@ -3,6 +3,7 @@ package pets_amok;
 public class VirtualPet implements Happiness {
 	private String name;
 	private String description;
+
 	private int hunger;
 	private int water;
 	private int boredom;
@@ -15,7 +16,7 @@ public class VirtualPet implements Happiness {
 		this(name, description, 50, 60, 70, 40, 30);
 	}
 
-	// Constructor used for Virtual Pets
+
 	public VirtualPet(String name, String description, int hunger, int water, int boredom, int waste, int happiness) {
 		this.name = name;
 		this.description = description;

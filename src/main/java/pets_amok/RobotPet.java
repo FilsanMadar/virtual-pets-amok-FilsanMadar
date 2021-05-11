@@ -7,7 +7,6 @@ public class RobotPet extends VirtualPet {
 		super(name, description);
 	}
 
-	// Constructor used for Robot Pets
 	public RobotPet(String name, String description, int oil, int batteryLevel, int happiness) {
 		super(name, description);
 		this.oil = oil;
